@@ -36,7 +36,7 @@ body{
 }
 
 .box-1 form{
-    width: 500px;
+    width: 50vw;
     height: 40px;
     position: fixed;
     box-shadow: rgba(0, 0, 0, 0.411) 2px 5px  5px;
@@ -73,21 +73,31 @@ body{
     left: -45vw;
     bottom: -45vw;
 }
+.title {
+    position: absolute;
+    top:35%;
+    left: 50px;
 
+}
+.title h2{ 
+    font-weight: 400;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+
+}
 
 .box-2{ 
     
     width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
- 
-
-  
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    height: 300px;
     padding: 10px;
+    position: absolute;
+    top: 30%;
+    padding: 50px;
+    color: #FFF;
+    font-family: 'Montserrat';
+
 }
 
 
@@ -105,24 +115,23 @@ body{
 }
 
 .box-2 .cards .card{
-    width: 400px;
-    height: 200px;
+    width:calc(164px * 2);
+    height: 164px;
     border-radius: 4px;
-
-    margin-right: 10px;
+    margin-right: 20px;
     background-color: #414B4D;
     box-shadow: rgba(0, 0, 0, 0.356) 5px 5px 5px;
- 
-    
     justify-content: space-around;
     align-items: center;
-
-    
     display: flex;
+    position: relative;
+   
 }
 .box-2 .cards .card .card-image img{
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 164px;
+    height: 100%;
 }
 .box-2 .cards .card .card-text{
     width: 200px;
@@ -133,10 +142,23 @@ body{
     color: #FFF;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
+
 }
 
 .box-2 .cards .card .card-text h3{
     font-weight: 600;
-
+    
     font-family: 'Montserrat';
+}
+
+.box-2 .cards .card .icons{
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+.box-2 .cards .card .icons a i{
+    text-decoration: none;
+    color: #FFF;
+    cursor: pointer;
 }

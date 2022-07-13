@@ -12,6 +12,12 @@
     <title>Tela de Login - Guitarize</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        <?php
+            include 'css/style.css';
+        ?>
+    </style>
 </head>
 <body>
     <div class="Tela-Login">

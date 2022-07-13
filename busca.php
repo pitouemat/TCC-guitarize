@@ -8,7 +8,7 @@ if(!isset($_GET['search'])){
 
 $src = "%".trim($_GET['search'])."%";
 
-$sth = $conn->prepare('SELECT * FROM `musicas` WHERE `nome` LIKE :nome ' );
+$sth = $conn->prepare('SELECT * FROM `musicas` WHERE `nome` LIKE :nome  OR `autor` LIKE :nome  OR `estilo` LIKE :nome ORDER BY `nome` ASC'  );
 
 $sth->bindParam(':nome', $src, PDO::PARAM_STR);
 

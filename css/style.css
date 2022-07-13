@@ -21,14 +21,14 @@
  
     body{
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #0093E9;
+       
         width: 100vw;
         height: 100vh;
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        background-image: linear-gradient(160deg, rgb(35, 44, 43) 0%, rgb(65, 75, 77) 100%);
         }
         
         .Tela-Login:hover{
