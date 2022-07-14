@@ -27,6 +27,7 @@ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/da688ad7ee.js" crossorigin="anonymous"></script>
 
     <style>
         <?php
@@ -73,7 +74,14 @@ if (count($result)){
         <h6><?php echo $results['estilo']?></h6>
 
       </div>
+
+      <div class="icons" data-image="imgs/<?php echo $results['imagem'];  ?>"data-artist="<?php echo $resuls
+        ['autor'] ?>"data-song="<?php echo $results['nome'] ?>" data-file="assets/<?php echo 
+        $results['nome'] ?>.mp3">
+        <a href="#"><i class="fa-solid fa-circle-play fa-2x"></i></a>
+      </div>
     </div>
+  
 
     
 
@@ -84,6 +92,30 @@ if (count($result)){
 </div>
 
 <div class="circle-2"></div>
+<audio id="audioPlayer" controls="" style="position: absolute; top: 0; left: 0; z-index: 0; opacity: 0;">
+</audio>
+
+<div class="player">
+        <div class="player_artist" id="player_artist">
+
+        </div>
+
+        <div class="player_control">
+            <div class="player_control_buttons">
+                <a href=""><i class="fas fa-backward"></i></a>
+                <a id="pauseBtn" href="#" style="display: none;"> <i class="far fa-pause-circle"></i></a>
+                <a id="playBtn" href="#"><i class="far fa-play-circle"></i></a>
+                <a href=""><i class="fas fa-forward"></i></a>
+            </div>
+
+            <div class="player_control_progress">
+                <div class="player_control_progress_2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="js/tocarMusica.js"></script>
 
 
 

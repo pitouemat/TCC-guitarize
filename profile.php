@@ -96,10 +96,10 @@ use LDAP\Result;
       </div>
 
 
-      <div class="icons" data-artist="<?php echo $resultados
-        ['nome'] ?>"data-song="<?php echo $resultados['nome'] ?>" data-file="assets/<?php echo 
+      <div class="icons" data-image="imgs/<?php echo $resultados['imagem'];  ?>"data-artist="<?php echo $resultados
+        ['autor'] ?>"data-song="<?php echo $resultados['nome'] ?>" data-file="assets/<?php echo 
         $resultados['nome'] ?>.mp3">
-        <a href="cifra.php"><i class="fa-solid fa-circle-play fa-2x"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-play fa-2x"></i></a>
       </div>
     </div>
 
@@ -116,36 +116,21 @@ use LDAP\Result;
 }
 ?>
   
- 
-
-
-
 
 </div>
+
+
+
 <div class="player">
         <div class="player_artist" id="player_artist">
 
         </div>
 
-        <div class="player_control">
-            <div class="player_control_buttons">
-                <a href=""><i class="fas fa-backward"></i></a>
-                <a id="pauseBtn" href="#" style="display: none;" <i class="far fa-pause-circle"></i></a>
-                <a id="playBtn" href="#"><i class="far fa-play-circle"></i></a>
-                <a href=""><i class="fas fa-forward"></i></a>
-            </div>
+        <audio id="audioPlayer" controls="" style="width: 80%; margin-left: 10px;"  ></audio>
 
-            <div class="player_control_progress">
-                <div class="player_control_progress_2">
-
-                </div>
-            </div>
-        </div>
     </div>
-<audio id="audioPlayer" controls="" style="position: absolute; top: 0; left: 0; z-index: 0; opacity: 0;">
-</audio>
-
-<script src="js/app.js"></script>
+  </div>
+  <script src="js/tocarMusic.js"></script>
 </body>
 
 </html>

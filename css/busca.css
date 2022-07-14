@@ -120,7 +120,7 @@ body{
     justify-content: space-around;
     align-items: center;
 
-    
+    position: relative;
     display: flex;
 }
 .results  .cards .card .card-image img{
@@ -144,10 +144,91 @@ body{
     font-weight: 600;
     margin-top: 15px;
     font-family: 'Montserrat';
+ 
 }
 
 .results .cards .card .card-text h4, h6{
     font-weight: 600;
 
     font-family: 'Montserrat';
+}
+
+.results .cards .card .icons{
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+.results .cards .card .icons a i{
+    text-decoration: none;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.player{
+    width: 100%;
+    
+    height: 80px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  
+    
+    display: flex;
+    background: #292828;
+    visibility: hidden;
+    
+}
+
+
+.player_artist > img{
+    max-width: 70px;
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.player_artist > h3{
+    display: inline-block;
+    color: #FFF;
+    font-weight: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 18px;
+}
+.player_artist > h3 > span{
+    color: rgb(200, 200, 200);
+    font-size: 13px;
+}
+
+.player_control{
+    width: 70%;
+    text-align: center;
+
+}
+
+.player_control_buttons a{
+
+    color: #FFF;
+    margin: 8px 15px;
+    font-size: 18px;
+}
+
+.player_control_progress{
+    width: 100%;
+    max-width: 600px;
+    height: 7px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgb(130, 130, 130);
+}
+.player_control_progress_2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 7px;
+    border-radius: 8px;
+    background-color: #FFF ;
 }
