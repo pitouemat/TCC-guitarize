@@ -78,7 +78,7 @@ use LDAP\Result;
 
 
       <div class="card-image">
-        <a href="cifra.php?musica=<?php echo $resultados['nome']?>">
+        <a href="cifra.php?id=<?php echo $resultados['id_musica']?>">
            <img src="imgs/<?php echo $resultados['imagem'] ?>" alt="">
         </a>
       </div>
