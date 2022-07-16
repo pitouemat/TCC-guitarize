@@ -30,7 +30,7 @@ use LDAP\Result;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guitarize - Cifras</title>
 
     <style>
         <?php
@@ -53,50 +53,7 @@ use LDAP\Result;
         </div>
 
         <div class="box-cifra">
-            <p style="white-space: wrap">
-        "Underneath the bridge
- F#5               D5
-Tarp has sprung a leak
-        F#5            D5
-And the animals Ive trapped
-     F#5            D5
-Have all become my pets
-         F#5            D5
-And Im living off of grass
-          F#5              D5
-And the drippings from my ceiling
-F#5               D5
-Its okay to eat fish
-             F#5            D5
-Cause they dont have any feelings
-
- F#5      A5      D5  A5
-Something in the way
-F#5  A5  D5  E5
-Hmm
- F#5      A5      D5   A5
-Something in the way, yeah
-F#5  A5  D5
-Hmm
-
- F#5      A5      D5  A5
-Something in the way
-F#5  A5  D5  E5
-Hmm
- F#5      A5      D5   A5
-Something in the way, yeah
-F#5  A5  D5
-Hmm
-
- F#5      A5      D5  A5
-Something in the way
-F#5  A5  D5  E5
-Hmm
- F#5      A5      D5   A5
-Something in the way, yeah
-F#5  A5  D5
-Hmm"
-            </p>
+           <pre> <?php echo $results['cifra'] ?> </pre>
 
         </div>
     </div>

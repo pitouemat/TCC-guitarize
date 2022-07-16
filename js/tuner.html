@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitarize - Afinador</title>
+    <script src="https://cdn.rawgit.com/citronneur/onlinetuner.co/master/js/onlinetuner.min.js"></script>
+
+    <link rel="stylesheet" href="/css/tuner.css">
+</head>
+
+<body>
+
+
+    <div class="title">
+        <h1>Afinador - Guitarize</h1>
+    </div>
+
+    <main>
+
+        <!-- Create a canvas where the tuner will be rendered -->
+        <canvas id="guitar-tuner" height="300"></canvas>
+
+        <!-- Create a canvas where the second tuner will be rendered -->
+        <canvas id="second-guitar-tuner" height="300"></canvas>
+
+        <div class="notes">
+            <p> 1ª corda na frequência de 330 Hz. </p></br>
+            <p> 2ª corda na frequência de 247 Hz. </p></br>
+            <p> 3ª corda na frequência de 196 Hz. </p></br>
+            <p> 4ª corda na frequência de 146 Hz. </p></br>
+            <p> 5ª corda na frequência de 110 Hz. </p></br>
+            <p> 6ª corda na frequência de 87 Hz. </p></br>
+            <br>
+            <br>
+            <p>(A contagem das cordas é feita de baixo para cima)</p>
+        </div>
+
+    </main>
+
+
+
+</body>
+<script>
+    var Settings = {
+        container: document.getElementById("guitar-tuner"),
+        backgroundColor: "#232C2B", // or hex colors "#ffffff"
+        notOkayColor: "#414B4D",
+        okayColor: "#69934d",
+        fontColor: "white",
+        textAlign: "center"
+    };
+
+    var SettingsSecondTuner = {
+        container: document.getElementById("guitar-tuner"),
+        backgroundColor: "#232C2B", // or hex colors "#ffffff"
+        notOkayColor: "#414B4D",
+        okayColor: "#69934d",
+        fontColor: "white",
+        textAlign: "center"
+
+    };
+
+    function initializeTuners() {
+        // Create a single or multiple instance of tuners at time
+        var tuners = [
+            // First tuner
+
+            // Second Tuner
+            new OnlineTuner.Controller.GuitareTuner(
+                new OnlineTuner.Widget.CircleWidget(
+                    SettingsSecondTuner.container,
+                    SettingsSecondTuner.backgroundColor,
+                    SettingsSecondTuner.notOkayColor,
+                    SettingsSecondTuner.okayColor,
+                    SettingsSecondTuner.fontColor
+                )
+            )
+        ];
+
+        // Initialize the tuner with the callbacks
+        new OnlineTuner.Analyser(tuners).install(function () {
+            console.log("Funfou");
+
+        }, function (errorMessage) {
+            console.error("Teste", errorMessage);
+        });
+    }
+
+    // Render the guitar tuner on the canvas by running the function
+    initializeTuners();
+</script>
+
+</html>

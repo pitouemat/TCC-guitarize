@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Love+Light&family=Montserrat:wght@200;300;400&family=Parisienne&family=Poppins:ital,wght@0,300;0,500;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #414B4D;
+    text-align: center;
+
+}
+
+main{
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 44, 43);
+    margin: auto;
+
+}
+
+main .notes{
+    color: #FFF;
+    font-family: 'Montserrat';
+}
+
+
+.title h1{
+    font-weight: bold;
+    font-size: 30pt;
+    color: #FFF;
+    font-family: 'Montserrat';
+
+    margin: auto;
+}
+
