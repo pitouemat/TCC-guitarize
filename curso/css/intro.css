@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Love+Light&family=Montserrat:wght@200;300;400&family=Parisienne&family=Poppins:ital,wght@0,300;0,500;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(52, 56, 57);
+ 
+}
+
+.circle{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background-color: rgb(35, 44, 43);
+    border-radius: 50%;
+    right: -45vw;
+    top: 10vw;
+}
