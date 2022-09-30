@@ -21,6 +21,10 @@ body{
 .box{
     width: 90vw;
     height: 90vh;
+    visibility: hidden;
+    z-index: 1;
+
+    margin-top: 50px;
 
    
     padding: 10px;
@@ -44,6 +48,13 @@ body{
     height: 100%;
     background-color: rgb(35, 44, 43);
     border-radius: 6px;
+    overflow-x: auto;
+display: flex;
+
+}
+
+.box .image-cover .box-chords img{
+    width: 200px;
 }
 .box .image-cover img{
     width: 350px;
@@ -62,6 +73,7 @@ body{
     overflow-y: auto;
     padding: 10px;
     font-size: 16pt;
+    visibility: hidden;
     
 }
 
@@ -74,4 +86,66 @@ body{
 
 .box .image-cover h2{
     font-weight: 500;
+}
+
+
+@media (max-width:600PX ){
+
+    .box{
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+    }
+
+.box .image-cover {
+    display: none;
+}
+.box .box-cifra{
+    width: 100%;
+    height: 100%;
+    font-size: 10pt;
+    margin: auto;
+  
+    
+}}
+
+.box-1{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    visibility: hidden;
+    z-index: 10000;
+}
+
+
+
+.box-1 form{
+    width: 50vw;
+    height: 40px;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.411) 2px 5px  5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 100px;
+}
+
+
+
+.box-1 form input{
+   width: 90%;
+   height: 95%;
+    outline: none;
+    border: none;
+}
+
+.box-1 form button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }

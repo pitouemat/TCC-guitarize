@@ -10,10 +10,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login - Guitarize</title>
+    <script src="https://kit.fontawesome.com/da688ad7ee.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        <?php
+            include 'css/style.css';
+        ?>
+    </style>
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.php"><img src="imgs/logo.png" alt="" width="100"></a>
+        </div>
+
+        <div class="icons">
+            <button class="light-mode" onclick="darkMode()"><i class=" fa-2x fa-regular fa-sun"></i></button>
+        </div>
+
+      
+
+    </nav>
     <div class="Tela-Login">
         <h1>Login</h1>
         <br><br>
@@ -24,7 +42,9 @@
             <br><br>
             <input type="Password" name="senha" placeholder="Senha" maxlength="32">
             <br><br>
-            <button input type="submit" value="ACESSAR">acessar</button>
+            <button input type="submit" value="ACESSAR">Acessar</button>
+            <br><br>
+            <a href="cadastro.php">Ainda não tem um cadastro?</a>
         </form>
     </div>
 
@@ -61,11 +81,28 @@ if(isset($_POST['email']))
 }
 else
     {
-        echo 'Preencha todos os campos!';
+        ?>
+            <script>
+                window.alert("Preencha todos os campos");
+            </script>
+        <?php
+
     }
 
 
 ?>
+ <script>
+        function darkMode() {
+        var element = document.body;
+        let loginForm= document.querySelector('.Tela-Login')
+        element.classList.toggle("dark");
+        loginForm.classList.toggle("darkLogin")
+
+
+        console.log(element)
+        console.log(loginForm)
+        }
+    </script>
 </body>
 
 </html>

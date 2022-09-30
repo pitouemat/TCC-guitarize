@@ -9,9 +9,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <script src="https://kit.fontawesome.com/da688ad7ee.js" crossorigin="anonymous"></script>
+
+    <style>
+        <?php
+            include 'css/style.css';
+        ?>
+    </style></head>
 <body>
+
+<nav class="navbar">
+        <div class="logo">
+            <a href="index.php"><img src="imgs/logo.png" alt="" width="100"></a>
+        </div>
+
+        <div class="icons">
+            <button class="light-mode" onclick="darkMode()"><i class=" fa-2x fa-regular fa-sun"></i></button>
+        </div>
+
+      
+
+    </nav>
     <div class="Tela-Login">
         <h1>Cadastrar</h1>
         <br><br>
@@ -28,6 +46,8 @@
             <input type="password" name="confSenha" placeholder="Confirmar Senha" maxlength="40">
             <br><br>
             <button input type="submit" value="cadastrar">Enviar</button>
+            <br><br>
+            <a href="TelaLogin.php">Já tem um login?</a>
         </form>
     </div>
     <?php
@@ -76,5 +96,17 @@
 
 
 ?>
+
+<script>
+    function darkMode(){
+        let element = document.body;
+        let loginForm = document.querySelector('.Tela-Login');
+
+        element.classList.toggle('dark');
+        loginForm.classList.toggle('dark');
+
+        console.log(element, loginForm)
+    }
+</script>
 </body>
 </html>

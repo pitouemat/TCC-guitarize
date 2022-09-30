@@ -145,11 +145,6 @@
 
         </div>
 
-        <div class="text">
-            <div class="text-block">
-            <h1>Para começar, nos diga quais são seus estilos musicais favoritos.</h1>
-            </div>
-        </div>
 
     </div>
 

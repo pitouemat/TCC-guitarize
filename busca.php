@@ -37,6 +37,18 @@ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+<nav class="navbar">
+        <div class="logo">
+            <a href="index.php"><img src="imgs/logo.png" alt="" width="100"></a>
+        </div>
+
+        <div class="icons">
+            <button class="light-mode" onclick="darkMode()"><i class=" fa-2x fa-regular fa-sun"></i></button>
+        </div>
+
+      
+
+    </nav>
 <div class="circle"></div>
 <div class="box-1">
   <form action="busca.php">
@@ -60,6 +72,7 @@ if (count($result)){
 
 
       <div class="card-image">
+      <a href="cifra.php?id=<?php echo $results['id_musica']?>">
         <img src="imgs/<?php echo $results['imagem'] ?>" alt="">
       </div>
 

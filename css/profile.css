@@ -8,18 +8,21 @@
 
 body{
     width: 100vw;
-    height: 100vh;
+    min-height: 400vh;
     background-color: #414B4D;
-    overflow-x: hidden;
+   
     
 }
 
 .box-1{
     width: 100vw;
-    position: relative;
+    margin-top: 110px;
+    position: fixed;
     display: flex;
     justify-content: center;
     padding: 20px;
+    visibility: hidden;
+    z-index: 10000;
 }
 
 .circle {
@@ -90,13 +93,17 @@ body{
 .box-2{ 
     
     width: 100vw;
-    height: 300px;
+    height: 400vh;
+ 
     padding: 10px;
     position: absolute;
     top: 30%;
+  
     padding: 50px;
     color: #FFF;
     font-family: 'Montserrat';
+    visibility: hidden;
+    z-index: 1;
 
 }
 
@@ -107,11 +114,12 @@ body{
     min-height: 300px;
     overflow-x: auto;
     display: flex;
+    z-index: 0;
     justify-content: space-between;
     align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  
+    
+
 }
 
 .box-2 .cards .card{
@@ -170,6 +178,7 @@ body{
     padding: 10px;
     position: fixed;
     bottom: 0;
+    z-index: 100;
     left: 0;
   
     
@@ -230,4 +239,89 @@ body{
     height: 7px;
     border-radius: 8px;
     background-color: #FFF ;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    border: 10px solid #988b7a;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2em;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: #988b7a;
+    color: white;
+    font-family: "PT Mono", monospace;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.692);
+    box-shadow: #000 5px 5px 5px;
+
+    position: absolute;
+    padding: 5px;
+    top: 0;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.navbar .icons button{
+
+border: none;
+background-color: transparent;
+color: aliceblue;
+position: absolute;
+right: 30px;
+top: 30px;
+cursor: pointer;
 }
